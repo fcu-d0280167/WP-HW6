@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 800px;
+        width: 100%;
+       }
+	</style>
+	</head>
+	<body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+	<script>
+
+		function initMap() {
+			var postoffice1 = {lat: 24.176715, lng: 120.637652};//西屯郵局 407台中市西屯區黎明路三段130號
+			var postoffice2 = {lat: 24.183428, lng: 120.618616};//台中福安郵局台中69支局 407台中市西屯區福順路318號
+			var postoffice3 = {lat: 24.175294, lng: 120.649123};//臺中逢甲郵局 407台中市西屯區河南路2段268號
+			var postoffice4 = {lat: 24.164624, lng: 120.654205};//台中何厝郵局 407台中市西屯區青海路一段83號
+			var postoffice5 = {lat: 24.190484, lng: 120.612211};//台中永安郵局 407台中市西屯區永安里西屯路三段166之80號
+			var postoffice6 = {lat: 24.179033, lng: 120.601642};//東海大學郵局 407台中市西屯區台灣大道四段1727號
+			var postoffice7 = {lat: 24.169486, lng: 120.606562};//台中工業區郵局台中46支局 407台中市西屯區工業區六路10號
+			var postoffice8 = {lat: 24.156540, lng: 120.652863};//台中大隆路郵局 40759台中市西屯區大隆路60、62號
+			var postoffice9 = {lat: 24.183965, lng: 120.604837};//台中榮總郵局台中52支局 407台中市西屯區台中港路三段160號
+			var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 14,
+			center: postoffice2
+			});
+			
+			
+			
+			var iconBase = 'http:// google.com/mapfiles/ms/micons';
+			var icons = {
+			postoffice: {
+			icon: iconBase + 'postoffice-us.png'
+			},
+			gas: {
+			icon: iconBase + 'gas.png'
+			},
+			};
+			var contentString = "407台中市西屯區黎明路三段130號";
+			var contentString2 = "407台中市西屯區福順路318號";
+			var contentString3 = "407台中市西屯區河南路2段268號";
+			var contentString4 = "407台中市西屯區青海路一段83號";
+			var contentString5 = "407台中市西屯區永安里西屯路三段166之80號";
+			var contentString6 = "407台中市西屯區台灣大道四段1727號";
+			var contentString7 = "407台中市西屯區工業區六路10號";
+			var contentString8 = "40759台中市西屯區大隆路60、62號";
+			var contentString9 = "407台中市西屯區台中港路三段160號";
+			
+			var infowindow = new google.maps.InfoWindow({
+			content: contentString
+			});
+			var marker = new google.maps.Marker({
+			position: postoffice1,
+			map: map,
+			title: '西屯郵局'
+			});
+
+			var infowindow2 = new google.maps.InfoWindow({
+			content: contentString2
+			});
+			var marker2 = new google.maps.Marker({
+			position: postoffice2,
+			map: map,
+			title: '台中福安郵局台中69支局'
+			});
+			
+			var infowindow3 = new google.maps.InfoWindow({
+			content: contentString3
+			});
+			var marker3 = new google.maps.Marker({
+			position: postoffice3,
+			map: map,
+			title: '臺中逢甲郵局'
+			});
+			
+			var infowindow4 = new google.maps.InfoWindow({
+			content: contentString4
+			});
+			var marker4 = new google.maps.Marker({
+			position: postoffice4,
+			map: map,
+			title: '台中何厝郵局'
+			});
+			
+			var infowindow5 = new google.maps.InfoWindow({
+			content: contentString5
+			});
+			var marker5 = new google.maps.Marker({
+			position: postoffice5,
+			map: map,
+			title: '台中永安郵局'
+			});
+			
+			var infowindow6 = new google.maps.InfoWindow({
+			content: contentString6
+			});
+			var marker6 = new google.maps.Marker({
+			position: postoffice6,
+			map: map,
+			title: '東海大學郵局'
+			});
+			
+			var infowindow7 = new google.maps.InfoWindow({
+			content: contentString7
+			});
+			var marker7 = new google.maps.Marker({
+			position: postoffice7,
+			map: map,
+			title: '台中工業區郵局台中46支局'
+			});
+			
+			var infowindow8 = new google.maps.InfoWindow({
+			content: contentString8
+			});
+			var marker8 = new google.maps.Marker({
+			position: postoffice8,
+			map: map,
+			title: '台中大隆路郵局'
+			});
+			
+			var infowindow9 = new google.maps.InfoWindow({
+			content: contentString9
+			});
+			var marker9 = new google.maps.Marker({
+			position: postoffice9,
+			map: map,
+			title: '台中榮總郵局台中52支局'
+			});
+			
+			marker.addListener('mouseover', function() {
+			infowindow.open(map, marker);
+			});
+			marker2.addListener('mouseover', function() {
+			infowindow2.open(map, marker2);
+			});
+			marker3.addListener('mouseover', function() {
+			infowindow3.open(map, marker3);
+			});
+			marker4.addListener('mouseover', function() {
+			infowindow4.open(map, marker4);
+			});
+			marker5.addListener('mouseover', function() {
+			infowindow5.open(map, marker5);
+			});
+			marker6.addListener('mouseover', function() {
+			infowindow6.open(map, marker6);
+			});
+			marker7.addListener('mouseover', function() {
+			infowindow7.open(map, marker7);
+			});
+			marker8.addListener('mouseover', function() {
+			infowindow8.open(map, marker8);
+			});
+			marker9.addListener('mouseover', function() {
+			infowindow9.open(map, marker9);
+			});
+			}
+</script>
+    <script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNHW-xfe0Qsm_Tkp3GDx8sTVbUYYnts9Y&callback=initMap">
+    </script>
+  </body>
+</html>
+
+
+//AIzaSyCNHW-xfe0Qsm_Tkp3GDx8sTVbUYYnts9Y
