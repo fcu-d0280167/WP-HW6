@@ -1,0 +1,44 @@
+	#totem_introduction
+	{
+		
+	/*	background-color: lightblue;*/
+
+		width: 561px;
+		padding-top: 50px;
+		padding-right: 0px;
+		padding-bottom: 50px;
+		padding-left: 0px;
+		float: left;
+	}
+	#totem
+	{
+		
+		width: 40%;
+		height: 40%;
+
+		
+		
+	}
+	
+	#snaketotem
+	{
+	
+		width: 40%;
+		height: 40%;
+		float: left;
+
+	}
+	.intro
+	{
+		
+		width: 70%;
+	}
+
+
+
+
+
+
+
+
+
